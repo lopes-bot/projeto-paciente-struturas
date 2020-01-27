@@ -3,7 +3,7 @@
 
 typedef struct fila Fila;
 typedef struct no No;
-Fila* cria(void);
+Fila* criafila(void);
 void inseri(Fila* f,int t);
 int retira(Fila* f);
 int isFull(Fila* f);

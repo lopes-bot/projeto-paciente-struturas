@@ -1,13 +1,15 @@
 # depslib dependency file v1.0
-1579734580 source:c:\users\andré lopes\desktop\projeto paciente\main.c
+1580153807 source:c:\users\andré lopes\desktop\projeto paciente\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	"paciente.h"
 	"lista.c"
+	"fila.h"
+	"fila.c"
 
-1579734151 c:\users\andré lopes\desktop\projeto paciente\paciente.h
+1580154133 c:\users\andré lopes\desktop\projeto paciente\paciente.h
 
 1579733936 c:\users\andré lopes\desktop\projeto paciente\lista.c
 	<stdio.h>
@@ -15,4 +17,11 @@
 	<string.h>
 	<locale.h>
 	"paciente.h"
+
+1580153859 c:\users\andré lopes\desktop\projeto paciente\fila.h
+
+1580154655 c:\users\andré lopes\desktop\projeto paciente\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
 

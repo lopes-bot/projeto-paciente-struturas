@@ -14,8 +14,8 @@ struct fila{
    No* fim;
 };
 
-Fila* cria(void){
-Fila* f= (Fila*)malloc(sizeof(Fila));
+Fila* criafila(void){
+Fila* f = (Fila*)malloc(sizeof(Fila));
 if(f==NULL){
     printf("erro\n");
     exit(1);
@@ -25,17 +25,23 @@ return f;
 
 
 }
+
 void inseri(Fila* f,int t){
+
 No* n= (No*)malloc(sizeof(No));
-if(n==NULL){
-    printf("erro\n");
-    exit(1);
-}
- strcpy(n ->nome , n);
- n->tempo=t;
- n->prox =NULL;
+
+    if(n==NULL){
+            printf("erro\n");
+            exit(1);
+    }
+
+     strcpy(n ->nome , n);
+     n->tempo=t;
+     n->prox =NULL;
 if(!isEmpty(f)){
+
     f->fim->prox = n;
+
 }else{
 
 f->inicio=n;
@@ -44,5 +50,13 @@ f->inicio=n;
 
 
 }
+int isEmpty(Fila* f){
+
+return (f->fim ==NULL);
+
+
+
+}
+
 
 
