@@ -4,13 +4,15 @@
 #include <locale.h>
 #include <stdbool.h>
 #include"pilha.h"
+#include "fila.h"
+
 typedef struct pilha Pilha;
+
 struct pilha{
 
 int n;
 int dim;
 char* vet;
-
 
 };
 
@@ -23,11 +25,10 @@ Pilha* criapilha(int tamanho){
 
 }
 
-void push (Pilha* p,char v[]){
-
+void push (Pilha* p,char nome[]){
 
 if(!isFull(p)){
-    p->vet[p->n]= v;
+    p->vet[p->n]= nome;
     p->n++;
 }else{
     printf("erro ao empilhar\n");

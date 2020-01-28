@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1580242046 source:c:\users\andré lopes\desktop\projeto paciente\main.c
+1580246157 source:c:\users\andré lopes\desktop\projeto paciente\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -20,20 +20,22 @@
 	<locale.h>
 	"paciente.h"
 
-1580231697 c:\users\andré lopes\desktop\projeto paciente\fila.h
+1580245840 c:\users\andré lopes\desktop\projeto paciente\fila.h
 
-1580243063 c:\users\andré lopes\desktop\projeto paciente\fila.c
+1580246427 c:\users\andré lopes\desktop\projeto paciente\fila.c
 	<stdio.h>
 	<stdlib.h>
 	"fila.h"
+	"pilha.h"
 
-1580235591 c:\users\andré lopes\desktop\projeto paciente\pilha.h
+1580244955 c:\users\andré lopes\desktop\projeto paciente\pilha.h
 
-1580243036 c:\users\andré lopes\desktop\projeto paciente\pilha.c
+1580245401 c:\users\andré lopes\desktop\projeto paciente\pilha.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	<stdbool.h>
 	"pilha.h"
+	"fila.h"
 

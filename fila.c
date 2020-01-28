@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "fila.h"
+#include "pilha.h"
+
+
 
 typedef struct fila Fila;
 typedef struct no No;
@@ -39,7 +42,8 @@ char* aux = (char*)malloc(10*sizeof(char));
 
      strcpy(n ->nome , vet);
      strcpy(n->tempo,aux);
-
+     strcat(n->nome," tempo:");
+     strcat(n->nome,n->tempo);
 
      n->prox =NULL;
         if(!isEmptyfila(f)){
@@ -75,13 +79,33 @@ void imprimefila (Fila* f){
     if(f!=NULL){
         No* aux;
     for(aux= f->inicio;aux!= NULL;aux=aux->prox){
-        printf("Nome: %s \n Tempo: %s\n",aux->nome,aux->tempo);
+        printf("Nome:%s\n",aux->nome);
 
     }
     printf("NULL\n");
     }
 
 }
+ char retirafila(Fila*f){
+     No* t;
+     char aux=(char*)malloc(1000*sizeof(char));
+
+     if(isEmptyfila(f)){
+            printf("erro");
+        exit(1);
+     }else{
+        t=f->inicio;
+       // strcpy(aux , t->nome);
+        aux= t->nome;
+        f->inicio=t->prox;
+        if(f->inicio==NULL){
+            free(t);
+    }
+        return aux;
+
+
+     }
+ }
 
 
 

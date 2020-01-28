@@ -28,7 +28,9 @@ for (i=0;i<tamanho;i++){
     t=t+10;
     inserifila(f,t,nome);
 }
-    imprimefila(f);
+   imprimefila(f);
+    retirafila(f);
+   imprimefila(f);
 
 
     return 0;
