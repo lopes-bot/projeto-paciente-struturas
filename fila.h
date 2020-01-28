@@ -4,10 +4,11 @@
 typedef struct fila Fila;
 typedef struct no No;
 Fila* criafila(void);
-void inseri(Fila* f,int t);
-int retira(Fila* f);
-int isFull(Fila* f);
-int isEmpty(Fila* f);
-void libera(Fila* f);
+void inserifila(Fila* f,int t,char vet[]);
+int retirafila(Fila* f);
+int isFullfila(Fila* f);
+int isEmptyfila(Fila* f);
+void liberafila(Fila* f);
+void imprimefila(Fila* f);
 
 #endif // FILA_H_INCLUDED

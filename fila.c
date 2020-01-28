@@ -26,7 +26,7 @@ return f;
 
 }
 
-void inseri(Fila* f,int t){
+void inserifila(Fila* f,int t,char vet[]){
 
 No* n= (No*)malloc(sizeof(No));
 
@@ -35,28 +35,51 @@ No* n= (No*)malloc(sizeof(No));
             exit(1);
     }
 
-     strcpy(n ->nome , n);
+     strcpy(n ->nome , vet);
      n->tempo=t;
      n->prox =NULL;
-if(!isEmpty(f)){
+        if(!isEmptyfila(f)){
 
-    f->fim->prox = n;
+                f->fim->prox = n;
 
-}else{
+        }else{
 
-f->inicio=n;
+                f->inicio=n;
+
+        }
+f->fim=n;
 
 }
-
-
-}
-int isEmpty(Fila* f){
+int isEmptyfila(Fila* f){
 
 return (f->fim ==NULL);
 
 
 
 }
+void liberafila(Fila* f){
+
+No* q=(No*)malloc(sizeof(No));
+while(q!=NULL){
+    No* t=q->prox;
+    free(q);
+}
+free(f);
+
+}
+void imprimefila (Fila* f){
+    if(f!=NULL){
+        No* aux;
+    for(aux= f->inicio;aux!= NULL;aux=aux->prox){
+        printf("Nome: %s \n Tempo: %i\n",aux->nome,aux->tempo);
+
+    }
+    printf("NULL\n");
+    }
+
+}
+
+
 
 
 

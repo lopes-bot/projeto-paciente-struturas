@@ -31,6 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="fila.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="fila.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="lista.c">
 			<Option compilerVar="CC" />
 			<Option target="&lt;{~None~}&gt;" />
@@ -39,6 +46,13 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="paciente.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="pilha.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="pilha.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>
