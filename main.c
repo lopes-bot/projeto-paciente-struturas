@@ -15,7 +15,6 @@ int main()
 int *f;
 char nome[1000];
 int t,i,tamanho;
-
     t=0;
     f=criafila();
     printf("insira a quantidade de pessoas que deseja cadastra\n");
@@ -29,7 +28,7 @@ for (i=0;i<tamanho;i++){
     t=t+10;
     inserifila(f,t,nome);
 }
-   // imprimefila(f);
+    imprimefila(f);
 
 
     return 0;

@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "fila.h"
+
 typedef struct fila Fila;
 typedef struct no No;
 struct no{
     char nome[1000];
-    int tempo;
+    char tempo[100];
     No* prox;
 
 };
@@ -29,14 +30,17 @@ return f;
 void inserifila(Fila* f,int t,char vet[]){
 
 No* n= (No*)malloc(sizeof(No));
-
+char* aux = (char*)malloc(10*sizeof(char));
+    itoa(t,aux,10);
     if(n==NULL){
             printf("erro\n");
             exit(1);
     }
 
      strcpy(n ->nome , vet);
-     n->tempo=t;
+     strcpy(n->tempo,aux);
+
+
      n->prox =NULL;
         if(!isEmptyfila(f)){
 
@@ -71,7 +75,7 @@ void imprimefila (Fila* f){
     if(f!=NULL){
         No* aux;
     for(aux= f->inicio;aux!= NULL;aux=aux->prox){
-        printf("Nome: %s \n Tempo: %i\n",aux->nome,aux->tempo);
+        printf("Nome: %s \n Tempo: %s\n",aux->nome,aux->tempo);
 
     }
     printf("NULL\n");

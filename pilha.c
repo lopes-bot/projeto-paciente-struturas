@@ -9,20 +9,21 @@ struct pilha{
 
 int n;
 int dim;
-float* vet;
+char* vet;
+
 
 };
 
 Pilha* criapilha(int tamanho){
     Pilha* p= (Pilha*)malloc(sizeof(Pilha));
     p->dim = tamanho;
-    p->vet = (float*)malloc(p->dim*sizeof(float));
+    p->vet = (char**)malloc(p->dim*sizeof(char*));
     p->n=0;
     return p;
 
 }
 
-void push (Pilha* p,float v){
+void push (Pilha* p,char v[]){
 
 
 if(!isFull(p)){
