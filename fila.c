@@ -9,7 +9,7 @@ typedef struct fila Fila;
 typedef struct no No;
 struct no{
     char nome[1000];
-    char tempo[100];
+    char tempo[1000];
     No* prox;
 
 };
@@ -30,18 +30,17 @@ return f;
 
 }
 
-void inserifila(Fila* f,int t,char vet[]){
+void inserifila(Fila* f,char t[],char vet[]){
 
 No* n= (No*)malloc(sizeof(No));
-char* aux = (char*)malloc(10*sizeof(char));
-    itoa(t,aux,10);
+
     if(n==NULL){
             printf("erro\n");
             exit(1);
     }
 
      strcpy(n ->nome , vet);
-     strcpy(n->tempo,aux);
+     strcpy(n->tempo,t);
      strcat(n->nome," tempo:");
      strcat(n->nome,n->tempo);
 

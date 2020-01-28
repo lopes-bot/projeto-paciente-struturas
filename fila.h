@@ -4,7 +4,7 @@
 typedef struct fila Fila;
 typedef struct no No;
 Fila* criafila(void);
-void inserifila(Fila* f,int t,char vet[]);
+void inserifila(Fila* f,char t[],char vet[]);
 char retirafila(Fila*f);
 int isFullfila(Fila* f);
 int isEmptyfila(Fila* f);
