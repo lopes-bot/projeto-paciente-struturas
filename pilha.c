@@ -12,14 +12,16 @@ struct pilha{
 
 int n;
 int dim;
-char* vet;
+char* nome;
+int*vet;
 
 };
 
 Pilha* criapilha(int tamanho){
     Pilha* p= (Pilha*)malloc(sizeof(Pilha));
     p->dim = tamanho;
-    p->vet = (char**)malloc(p->dim*sizeof(char*));
+    p->nome = (char*)malloc(p->dim*sizeof(char));
+    p->vet = (int*)malloc(p->dim*sizeof(char));
     p->n=0;
     return p;
 
@@ -91,13 +93,13 @@ p=NULL;
 
 
 }
-void imprime(Pilha *p){
+void imprimepilha(Pilha *p){
 
 int i;
 for (i=p->n-1;i>=0;i--){
 
 
-    printf("%f \n",p->vet[i]);
+    printf("%s \n",p->vet[i]);
 }
 
 

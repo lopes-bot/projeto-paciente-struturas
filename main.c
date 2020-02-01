@@ -12,13 +12,14 @@
 
 int main()
 {
-int *f;
-char nome[1000];
+int *f,*lst;
+char nome[1000],aux[1000];
 char tempo[1000];
 int i,tamanho;
-
     f=criafila();
-    printf("insira a quantidade de pessoas que deseja cadastra\n");
+    lst = cria_lista();
+
+   printf("insira a quantidade de pessoas que deseja cadastra\n");
     scanf("%i",&tamanho);
     fflush(stdin);
 for (i=0;i<tamanho;i++){
@@ -26,15 +27,36 @@ for (i=0;i<tamanho;i++){
     gets(nome);
     fflush(stdin);
     printf("\n");
-    printf("o tempo:");
+    printf("tempo:");
     gets(tempo);
     fflush(stdin);
+
     printf("\n");
-    inserifila(f,tempo,nome);
+    strcpy(aux," tempo:");
+    strcat(aux,tempo);
+    strcat(nome,aux);
+    lstInsere(lst,nome);
+   // inserifila(f,tempo,nome);
 }
-   imprimefila(f);
-    retirafila(f);
-   imprimefila(f);
+  cria_relatorio(lst);
+  imprime_relatorio();
+
+   //p=criapilha(tamanho);
+
+
+
+   //printf("%s",aux);
+   /*
+for (i=0;i<tamanho;i++){
+
+    strcpy(aux,retirafila(f));
+    push(p,aux);
+
+}*/
+//strcpy(aux,retirafila(f));
+//printf("%s",aux);
+//imprimepilha(p);
+
 
 
     return 0;

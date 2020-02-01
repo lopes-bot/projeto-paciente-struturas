@@ -30,6 +30,7 @@ return f;
 
 }
 
+
 void inserifila(Fila* f,char t[],char vet[]){
 
 No* n= (No*)malloc(sizeof(No));
@@ -87,20 +88,24 @@ void imprimefila (Fila* f){
 }
  char retirafila(Fila*f){
      No* t;
-     char aux=(char*)malloc(1000*sizeof(char));
+     char *nome;
+    nome=(char*)malloc(1000*sizeof(char));
 
      if(isEmptyfila(f)){
             printf("erro");
         exit(1);
      }else{
         t=f->inicio;
-       // strcpy(aux , t->nome);
-        aux= t->nome;
+       strcpy(nome , t->nome);
+       // aux= t->nome;
+
         f->inicio=t->prox;
         if(f->inicio==NULL){
             free(t);
-    }
-        return aux;
+
+        }
+    printf("retorno :%s",nome);
+    return nome;
 
 
      }
