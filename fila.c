@@ -116,20 +116,14 @@ fila_pilha (Fila* f,int n){
     p= criapilha(n);
     if(f!=NULL){
         No* aux;
-        int i;
-        int *vet,*prt;
-        vet =(int*)malloc(n*sizeof(int));
-        i=0;
+        int *prt;
+
         push(p,f->inicio);
     for(aux= f->inicio;aux!= NULL;aux=aux->prox){
-            i++;
-       vet[i]=aux->prox;
-       printf("tranferindo da fila para pilha \n");
-       printf("vet [%i] = %i \n",i,vet[i]);
         push(p,aux->prox);
 
     }
-    printf("NULL\n");
+
     }
     return p;
 }

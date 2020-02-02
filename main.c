@@ -38,28 +38,13 @@ for (i=0;i<tamanho;i++){
     inserifila(f,tempo,nome);
 }
     p = fila_pilha(f,tamanho);
-   // imprimepilha(p);
+
     lst = pilha_lista(p);
 
     lstPrint(lst);
     cria_relatorio(lst);
     imprime_relatorio();
 
-   //p=criapilha(tamanho);
-
-
-
-   //printf("%s",aux);
-   /*
-for (i=0;i<tamanho;i++){
-
-    strcpy(aux,retirafila(f));
-    push(p,aux);
-
-}*/
-//strcpy(aux,retirafila(f));
-//printf("%s",aux);
-//imprimepilha(p);
 
 
 

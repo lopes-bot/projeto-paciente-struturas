@@ -29,7 +29,7 @@ if(novo == NULL){
     printf("erro de alocação\n");
     exit(1);
 }
-printf("\n inserido na lista %s \n",n);
+
 novo->prt = n;
 novo->prox = lst->primeiro;
 lst->primeiro = novo;

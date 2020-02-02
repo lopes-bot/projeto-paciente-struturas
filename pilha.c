@@ -30,8 +30,6 @@ void push (Pilha* p,int v){
 if(!isFull(p)){
     p->vet[p->n]= v;
     p->n++;
-}else{
-    printf("erro ao empilhar\n");
 }
 
 
@@ -110,15 +108,12 @@ int i,j;
 
 int *lst;
 lst= cria_lista();
-printf("transferindo pilha para lista \n");
+
 for (i=p->n-1;i>=0;i--){
-
-
-    printf("%s \n",p->vet[i]);
 
     lstInsere(lst,p->vet[i]);
      pop(p);
-    printf("pop %i \n",p->vet[i]);
+
 }
 
 return lst;
