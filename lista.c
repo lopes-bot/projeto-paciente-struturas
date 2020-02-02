@@ -40,7 +40,7 @@ lst->primeiro = novo;
 void lstPrint (Lista* lst){
     if(lst!=NULL){
         Node* aux;
-        printf("\n imprimindo a lista \n");
+        printf("\n Imprimindo a lista \n");
     for(aux= lst->primeiro;aux!=NULL;aux=aux->prox){
         printf("Nome: %s \n",aux->prt);
 
@@ -60,7 +60,7 @@ void cria_relatorio (Lista* lst){
         fprintf(pont_arq,"paciente atendido: %s\n",aux->prt);
     }
         fclose(pont_arq);
-        printf("dados gravados com sucesso\n");
+        printf("\n dados gravados com sucesso\n");
     }
 
 }

@@ -42,9 +42,9 @@ No* n= (No*)malloc(sizeof(No));
 
      strcpy(n ->nome , vet);
      strcpy(n->tempo,t);
-     strcat(n->nome," tempo:");
+     strcat(n->nome," TEMPO de Triagem:");
      strcat(n->nome,n->tempo);
-
+     strcat(n->nome,"min");
      n->prox =NULL;
         if(!isEmptyfila(f)){
 
@@ -79,6 +79,7 @@ free(f);
 void imprimefila (Fila* f){
     if(f!=NULL){
         No* aux;
+        printf("\n Imprimindo fila \n");
     for(aux= f->inicio;aux!= NULL;aux=aux->prox){
         printf("Nome:%s\n",aux->nome);
 

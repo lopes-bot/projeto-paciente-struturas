@@ -92,14 +92,12 @@ p=NULL;
 void imprimepilha(Pilha *p){
 
 int i;
-printf("imprimindo pilha \n");
-for (i=p->n-1;i>=0;i--){
+printf("\n Imprimindo Pilha \n");
+for (i=p->n;i>=0;i--){
 
-
-    printf("%i \n",p->vet[i]);
     printf("%s \n",p->vet[i]);
 }
-
+printf("NULL \n");
 
 }
  pilha_lista(Pilha *p){// função que tranfere da pilha para lista

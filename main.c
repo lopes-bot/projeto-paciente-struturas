@@ -13,34 +13,33 @@
 int main()
 {
 int *f,*lst,*p;
-char nome[1000],aux[1000];
+char nome[1000];
 char tempo[1000];
 int i,tamanho;
     f=criafila();
     lst = cria_lista();
 
 
-    printf("insira a quantidade de pessoas que deseja cadastra\n");
+    printf("Insira a quantidade de pessoas que deseja cadastra\n");
     scanf("%i",&tamanho);
     fflush(stdin);
 
 for (i=0;i<tamanho;i++){
-    printf("inseri o nome do paciente:");
+    printf("Inseri o nome do paciente:");
     gets(nome);
     fflush(stdin);
-    printf("\n");
-    printf("tempo:");
+    printf("TEMPO de Triagem:");
     gets(tempo);
     fflush(stdin);
 
-    printf("\n");
 
     inserifila(f,tempo,nome);
 }
     p = fila_pilha(f,tamanho);
 
     lst = pilha_lista(p);
-
+    imprimefila(f);
+    imprimepilha(p);
     lstPrint(lst);
     cria_relatorio(lst);
     imprime_relatorio();
