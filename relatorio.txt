@@ -1,1 +1,2 @@
-paciente atendido: Andre lopes tempo:10
+paciente atendido: mateus tempo:30
+paciente atendido: Andre tempo:10

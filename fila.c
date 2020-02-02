@@ -111,7 +111,7 @@ void imprimefila (Fila* f){
 
      }
  }
-fila_pilha (Fila* f,int n){
+fila_pilha (Fila* f,int n){//função que transferi da fila para pilha
      int *p;
     p= criapilha(n);
     if(f!=NULL){

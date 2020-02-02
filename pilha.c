@@ -102,14 +102,14 @@ for (i=p->n-1;i>=0;i--){
 
 
 }
- pilha_lista(Pilha *p){
+ pilha_lista(Pilha *p){// função que tranfere da pilha para lista
 
 int i,j;
 
 int *lst;
 lst= cria_lista();
 
-for (i=p->n-1;i>=0;i--){
+for (i=0;i<p->dim;i++){
 
     lstInsere(lst,p->vet[i]);
      pop(p);
