@@ -57,6 +57,7 @@ No* n= (No*)malloc(sizeof(No));
         }
 f->fim=n;
 
+
 }
 int isEmptyfila(Fila* f){
 
@@ -110,6 +111,28 @@ void imprimefila (Fila* f){
 
      }
  }
+fila_pilha (Fila* f,int n){
+     int *p;
+    p= criapilha(n);
+    if(f!=NULL){
+        No* aux;
+        int i;
+        int *vet,*prt;
+        vet =(int*)malloc(n*sizeof(int));
+        i=0;
+        push(p,f->inicio);
+    for(aux= f->inicio;aux!= NULL;aux=aux->prox){
+            i++;
+       vet[i]=aux->prox;
+       printf("tranferindo da fila para pilha \n");
+       printf("vet [%i] = %i \n",i,vet[i]);
+        push(p,aux->prox);
+
+    }
+    printf("NULL\n");
+    }
+    return p;
+}
 
 
 

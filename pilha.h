@@ -4,7 +4,8 @@
 typedef struct pilha Pilha;
 
 Pilha* criapilha(int tamanho);
-void push (Pilha* p,char vet[]);
+void push (Pilha* p,int v);
 void imprimepilha(Pilha *p);
+pilha_lista(Pilha *p);
 
 #endif // PILHA_H_INCLUDED

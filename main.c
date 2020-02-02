@@ -12,16 +12,18 @@
 
 int main()
 {
-int *f,*lst;
+int *f,*lst,*p;
 char nome[1000],aux[1000];
 char tempo[1000];
 int i,tamanho;
     f=criafila();
     lst = cria_lista();
 
-   printf("insira a quantidade de pessoas que deseja cadastra\n");
+
+    printf("insira a quantidade de pessoas que deseja cadastra\n");
     scanf("%i",&tamanho);
     fflush(stdin);
+
 for (i=0;i<tamanho;i++){
     printf("inseri o nome do paciente:");
     gets(nome);
@@ -32,14 +34,16 @@ for (i=0;i<tamanho;i++){
     fflush(stdin);
 
     printf("\n");
-    strcpy(aux," tempo:");
-    strcat(aux,tempo);
-    strcat(nome,aux);
-    lstInsere(lst,nome);
-   // inserifila(f,tempo,nome);
+
+    inserifila(f,tempo,nome);
 }
-  cria_relatorio(lst);
-  imprime_relatorio();
+    p = fila_pilha(f,tamanho);
+   // imprimepilha(p);
+    lst = pilha_lista(p);
+
+    lstPrint(lst);
+    cria_relatorio(lst);
+    imprime_relatorio();
 
    //p=criapilha(tamanho);
 

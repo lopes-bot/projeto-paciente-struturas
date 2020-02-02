@@ -10,5 +10,7 @@ int isFullfila(Fila* f);
 int isEmptyfila(Fila* f);
 void liberafila(Fila* f);
 void imprimefila(Fila* f);
+int fila_pilha (Fila* f,int n);
+fila_pilha (Fila* f,int n);
 
 #endif // FILA_H_INCLUDED

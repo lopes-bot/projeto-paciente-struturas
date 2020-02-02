@@ -12,7 +12,6 @@ struct pilha{
 
 int n;
 int dim;
-char* nome;
 int*vet;
 
 };
@@ -20,17 +19,16 @@ int*vet;
 Pilha* criapilha(int tamanho){
     Pilha* p= (Pilha*)malloc(sizeof(Pilha));
     p->dim = tamanho;
-    p->nome = (char*)malloc(p->dim*sizeof(char));
     p->vet = (int*)malloc(p->dim*sizeof(char));
     p->n=0;
     return p;
 
 }
 
-void push (Pilha* p,char nome[]){
+void push (Pilha* p,int v){
 
 if(!isFull(p)){
-    p->vet[p->n]= nome;
+    p->vet[p->n]= v;
     p->n++;
 }else{
     printf("erro ao empilhar\n");
@@ -96,11 +94,32 @@ p=NULL;
 void imprimepilha(Pilha *p){
 
 int i;
+printf("imprimindo pilha \n");
 for (i=p->n-1;i>=0;i--){
 
 
+    printf("%i \n",p->vet[i]);
     printf("%s \n",p->vet[i]);
 }
 
 
+}
+ pilha_lista(Pilha *p){
+
+int i,j;
+
+int *lst;
+lst= cria_lista();
+printf("transferindo pilha para lista \n");
+for (i=p->n-1;i>=0;i--){
+
+
+    printf("%s \n",p->vet[i]);
+
+    lstInsere(lst,p->vet[i]);
+     pop(p);
+    printf("pop %i \n",p->vet[i]);
+}
+
+return lst;
 }

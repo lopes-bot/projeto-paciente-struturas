@@ -6,7 +6,7 @@
 typedef struct node Node;
 typedef struct lista Lista;
 struct node{
-char nome[1000];
+    int prt;
 Node*prox;
 
 };
@@ -22,14 +22,15 @@ return lst;
 
 
 }
-void lstInsere (Lista *lst, char n[]){
+void lstInsere (Lista *lst, int n){
 
 Node* novo = (Node*)malloc(sizeof(Node));
 if(novo == NULL){
     printf("erro de alocação\n");
     exit(1);
 }
-strcpy(novo ->nome , n);
+printf("\n inserido na lista %s \n",n);
+novo->prt = n;
 novo->prox = lst->primeiro;
 lst->primeiro = novo;
 
@@ -39,8 +40,9 @@ lst->primeiro = novo;
 void lstPrint (Lista* lst){
     if(lst!=NULL){
         Node* aux;
+        printf("\n imprimindo a lista \n");
     for(aux= lst->primeiro;aux!=NULL;aux=aux->prox){
-        printf("Nome: %s \n",aux->nome);
+        printf("Nome: %s \n",aux->prt);
 
     }
     printf("NULL\n");
@@ -55,7 +57,7 @@ void cria_relatorio (Lista* lst){
 
     for(aux= lst->primeiro;aux!=NULL;aux=aux->prox){
 
-        fprintf(pont_arq,"%s \n",aux->nome);
+        fprintf(pont_arq,"paciente atendido: %s\n",aux->prt);
     }
         fclose(pont_arq);
         printf("dados gravados com sucesso\n");
