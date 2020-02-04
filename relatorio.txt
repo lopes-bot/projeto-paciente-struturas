@@ -1,5 +1,2 @@
-paciente atendido: Bruno Otopatama TEMPO de Triagem:22min
-paciente atendido: Mateus jose TEMPO de Triagem:20min
-paciente atendido: pessoa aleatoria TEMPO de Triagem:15min
-paciente atendido: Cornelhos da silva TEMPO de Triagem:12min
+paciente atendido: carlos italo TEMPO de Triagem:30min
 paciente atendido: Andr‚ Lopes TEMPO de Triagem:10min

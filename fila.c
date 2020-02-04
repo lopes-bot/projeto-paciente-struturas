@@ -112,21 +112,21 @@ void imprimefila (Fila* f){
 
      }
  }
-fila_pilha (Fila* f,int n){//função que transferi da fila para pilha
-     int *p;
+Pilha* fila_pilha (Fila* f,int n){//função que transferi da fila para pilha
+     Pilha *p;
     p= criapilha(n);
     if(f!=NULL){
         No* aux;
-        int *prt;
 
-        push(p,f->inicio);
-    for(aux= f->inicio;aux!= NULL;aux=aux->prox){
-        push(p,aux->prox);
+            printf("\ninserindo elemento da fila para pilha \n");
+            for(aux= f->inicio;aux!= NULL;aux=aux->prox){
+                    printf("\nelemento passado para push -> %s  \n",aux->nome);
+                    push(p,aux->nome);
 
+            }
+     return p;
     }
 
-    }
-    return p;
 }
 
 

@@ -1,6 +1,6 @@
 #ifndef FILA_H_INCLUDED
 #define FILA_H_INCLUDED
-
+#include "pilha.h"
 typedef struct fila Fila;
 typedef struct no No;
 Fila* criafila(void);
@@ -10,7 +10,6 @@ int isFullfila(Fila* f);
 int isEmptyfila(Fila* f);
 void liberafila(Fila* f);
 void imprimefila(Fila* f);
-int fila_pilha (Fila* f,int n);
-fila_pilha (Fila* f,int n);
+Pilha* fila_pilha (Fila* f,int n);
 
 #endif // FILA_H_INCLUDED

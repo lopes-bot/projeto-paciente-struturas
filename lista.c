@@ -6,7 +6,7 @@
 typedef struct node Node;
 typedef struct lista Lista;
 struct node{
-    int prt;
+    char paciente[1000];
 Node*prox;
 
 };
@@ -22,7 +22,7 @@ return lst;
 
 
 }
-void lstInsere (Lista *lst, int n){
+void lstInsere_inicio(Lista *lst, char nome[]){
 
 Node* novo = (Node*)malloc(sizeof(Node));
 if(novo == NULL){
@@ -30,9 +30,34 @@ if(novo == NULL){
     exit(1);
 }
 
-novo->prt = n;
+strcpy(novo->paciente,nome);
 novo->prox = lst->primeiro;
 lst->primeiro = novo;
+
+
+
+}
+void lstInsere_final(Lista *lst, char nome[]){
+
+Node* novo = (Node*)malloc(sizeof(Node));
+
+        if(novo == NULL){
+            printf("erro de alocação\n");
+            exit(1);
+        }
+        strcpy(novo->paciente,nome);
+        novo->prox = NULL;
+    if(lst->primeiro!= NULL){
+        Node *aux,*anterior;
+        for(aux=lst->primeiro;aux!=NULL;aux=aux->prox){
+            anterior = aux;
+        }
+        anterior->prox = novo;
+}else{
+
+lst->primeiro= novo;
+
+}
 
 
 
@@ -42,7 +67,7 @@ void lstPrint (Lista* lst){
         Node* aux;
         printf("\n Imprimindo a lista \n");
     for(aux= lst->primeiro;aux!=NULL;aux=aux->prox){
-        printf("Nome: %s \n",aux->prt);
+        printf("Nome: %s \n",aux->paciente);
 
     }
     printf("NULL\n");
@@ -57,7 +82,7 @@ void cria_relatorio (Lista* lst){
 
     for(aux= lst->primeiro;aux!=NULL;aux=aux->prox){
 
-        fprintf(pont_arq,"paciente atendido: %s\n",aux->prt);
+        fprintf(pont_arq,"paciente atendido: %s\n",aux->paciente);
     }
         fclose(pont_arq);
         printf("\n dados gravados com sucesso\n");
